@@ -6,7 +6,7 @@ import { collection, addDoc, getDocs } from 'firebase/firestore';
 
 import { setInputValue, generatePrescription } from '../store/prescription/prescriptionSlice';
 
-export default function() {
+const NewPrescription = () => {
   // Init
   const categories = ['Ear', 'Nose', 'Throat'];
   const [ready, setReady] = useState(false);
@@ -189,7 +189,7 @@ export default function() {
         </div>
         <div className="mb-3">
           <div className="text-start">
-            <p className="font-thin">Doctor's Comment</p>
+            <p className="font-thin">Doctor&apos;s Comment</p>
             <textarea
               className="rounded-2xl col-span-12 border-2 border-[#004643] pl-2 w-full text-[#928F90]"
               name="doctors_comment"
@@ -209,3 +209,4 @@ export default function() {
       </div>
   )
 }
+export default NewPrescription;

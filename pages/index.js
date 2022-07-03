@@ -13,16 +13,10 @@ export default function Home() {
     <>
       <Head>
         <title>ABC Hospital</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,100&display=swap" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"></link>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" />
       </Head>
       <div style={{display: 'grid', gridTemplateRows: '1fr 6fr', gridTemplateAreas: "'header' 'content'", height: '100vh'}}>
         <div style={{fontSize: 40, color: '#FFFFFE', gridArea: 'header'}} className="flex items-center justify-center">
-          <a href='/'>ABC Hospital</a>
+          <div onClick={() => window.location.reload(true)}>ABC Hospital</div>
         </div>
         <div style={{gridArea: 'content', color: '#FFFFFE'}}>
         {selectedSession === '' && 

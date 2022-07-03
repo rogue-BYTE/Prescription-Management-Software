@@ -9,7 +9,7 @@ import { setInputValue, generatePrescription } from '../store/prescription/presc
 import BootstrapTable from 'react-bootstrap-table-next';
 // import 'react-bootstrap-table-next/dist/react-bootstrap-table2.min.css';
 
-export default function() {
+const LoadPrescription = () => {
   // Init
   const [prescriptions, setPrescriptions] = useState([]);
   useEffect(() => {
@@ -29,7 +29,7 @@ export default function() {
       setPrescriptions(temp.reverse());
     };
     getPrescriptions();
-  }, []);
+  });
   //Table
   const columns = [{
     dataField: 'serial_no',
@@ -56,3 +56,4 @@ export default function() {
     </div>
   )
 }
+export default LoadPrescription;
